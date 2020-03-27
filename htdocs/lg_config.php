@@ -26,10 +26,10 @@ $_CONFIG['plink'] = '/usr/local/bin/plink';
 $_CONFIG['sshpass'] = '/usr/bin/sshpass';
 
 /* URL IP whois serviço */
-$_CONFIG['ipwhois'] = 'https://rdap.registro.br/ip/';
+$_CONFIG['ipwhois'] = 'https://stat.ripe.net/';
 
 /* URL AS whois serviço */
-$_CONFIG['aswhois'] = 'https://rdap.registro.br/autnum/';
+$_CONFIG['aswhois'] = 'https://stat.ripe.net/';
 
 /**
  * Routers
