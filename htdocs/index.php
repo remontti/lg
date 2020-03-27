@@ -62,8 +62,8 @@ $_CONFIG = array
 	'sshcommand' => 'sshpass',
 	'plink' => '/usr/local/bin/plink',
 	'sshpass' => '/usr/bin/sshpass',
-	'ipwhois' => 'https://rdap.registro.br/ip/',
-	'aswhois' => 'https://rdap.registro.br/autnum/',
+	'ipwhois' => 'https://stat.ripe.net/',
+	'aswhois' => 'https://stat.ripe.net/',
 	'routers' => array(),
 );
 
