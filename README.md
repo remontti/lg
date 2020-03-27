@@ -1,41 +1,41 @@
-## HSDN PHP Looking Glass
-PHP Version of BGP Looking Glass script, based on the Perl sources: https://github.com/Cougar/lg
+## PHP Looking Glass
+Based on https://github.com/hsdn/lg
 
 ### General Features
-- Supports the Telnet and SSH (through Putty/plink or sshpass).
-- Supports the Cisco, MikroTik v5/v6, Juniper, Huawei (Comware), Quagga (Zebra) and OpenBGPD routers.
-- Supports the IPv4 and IPv6 protocols.
-- Automatic conversion IPs to subnets using Merit RADb for MikroTik (http://www.ra.net/).
-- Drawing graph of BGP AS pathes using GraphViz toolkit.
-- Works on php 5.2.0 and above.
+- Suporte a Telnet e SSH (plink ou sshpass).
+- Suporte a Cisco, MikroTik v5/v6, Juniper, Huawei (Comware), Quagga (Zebra) e OpenBGPD routers.
+- Suppores aos protocolos IPv4 e IPv6.
+- Conversão automática de IPs em sub-redes usando Merit RADb para MikroTik (http://www.ra.net/).
+- Desenho do gráfico de patches do BGP AS usando o kit de ferramentas GraphViz.
+- Funciona no php 5.2.0 e superiores.
 
-### System Requirements
-- php version 5.2.0 and above with Sockets and Filter (http://www.php.net/).
-- For the SSH connections require **sshpass** or Putty **plink** command (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
-- GraphViz toolkit for drawing BGP pathes graph (http://www.graphviz.org/).
-- php pear package Image_GraphViz (http://pear.php.net/package/Image_GraphViz).
+### Requisitos de sistema
+- php versão 5.2.0 e superior com soquetes e filtro (http://www.php.net/).
+- Para as conexões SSH, é necessário **sshpass** ou Putty **plink** comando (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+- Kit de ferramentas GraphViz para desenhar gráfico de caminhos BGP (http://www.graphviz.org/).
+- php pear pacote Image_GraphViz (http://pear.php.net/package/Image_GraphViz).
 
-### Installation Instructions
-1. Copy **index.php** file to your web server home directory.
-2. Copy **lg_config.php.example** file as **lg_config.php** into your web server home directory.
-3. Edit **lg_config.php** configuration file (see parameters description below).
+### Instruções de instalação
+1. Copie **index.php** para o diretório inicial do servidor da web.
+2. Copie **lg_config.php.example** para **lg_config.php** no diretório inicial do servidor da web.
+3. Edite **lg_config.php** arquivo de configuração (veja a descrição dos parâmetros abaixo).
 
-### Configuration Parameters
-#### Branding Configuration
-- `$_CONFIG['asn']` - Your AS number for display on the LG page.
-- `$_CONFIG['company']` - Your company for display on the LG page.
-- `$_CONFIG['logo']` - Your company logo for display on the LG page.
-- `$_CONFIG['color']` - Main color of design elements on the LG page.
-- `$_CONFIG['ipwhois']` - URL address of the IP whois service.
-- `$_CONFIG['aswhois']` - URL address of the AS whois service.
+### Parâmetros de configuração
+#### Configuração das variável 
+- `$_CONFIG['asn']` - Seu número AS para exibição na página LG.
+- `$_CONFIG['company']` - Sua empresa para exibição na página LG.
+- `$_CONFIG['logo']` - O logotipo da sua empresa para exibição na página LG.
+- `$_CONFIG['color']` - Cor principal dos elementos de design na página LG.
+- `$_CONFIG['ipwhois']` - Endereço URL do serviço IP whois.
+- `$_CONFIG['aswhois']` - Endereço URL do serviço AS whois.
 
 #### Programs Configuration
-- `$_CONFIG['sshcommand']` - Type of command to make a SSH connection (you can use *plink* or *sshpass* as value).
-- `$_CONFIG['plink']` - Path to **plink** command if you use it (for SSH connections).
-- `$_CONFIG['sshpass']` - Path to **sshpass** command if you use it (for SSH connections).
+- `$_CONFIG['sshcommand']` - Tipo de comando para fazer uma conexão SSH (você pode usar *plink* ou *sshpass*).
+- `$_CONFIG['plink']` - Caminho para**plink** comando se você usá-lo (para conexão SSH).
+- `$_CONFIG['sshpass']` - Caminho para **sshpass** comando se você usá-lo (para conexão SSH).
 
-#### Routers Configuration
-Configuration of routers is specified as array in the parameter `$_CONFIG['routers']` with following format:
+#### Configuração dos Routers
+A configuração dos roteadores é especificada como matriz no parâmetro `$_CONFIG['routers']` com o seguinte formato:
 ```php
 $_CONFIG['routers'] = array
 (
@@ -51,40 +51,32 @@ $_CONFIG['routers'] = array
 );
 ```
 
-##### Router parameters:
-- `url` - URL address in format: **[ssh|telnet]://[login]:[password]@[host]:[port]**.
-- `pingtraceurl` - URL address for ping and traceroute tools for Quagga routers (or *FALSE*).
-- `description` - Router description.
-- `group` - Router group name - AS number (or *FALSE*).
-- `ipv6` - Router is supports IPv6 (*TRUE* or *FALSE*).
-- `os` - Router type (*ios*, *mikrotik*, *quagga,* *junos*, *openbgpd*, *huawei*).
+##### Parâmetros Router:
+- `url` - Endereço URL em formato: **[ssh|telnet]://[login]:[password]@[host]:[port]**.
+- `pingtraceurl` - Endereço URL para ferramentas de ping e traceroute para roteadores Quagga (ou * FALSE *).
+- `description` -Descrição do roteador.
+- `group` - Nome do grupo de roteadores - AS (ou *FALSE*).
+- `ipv6` - Suporte IPv6 (*TRUE* ou *FALSE*).
+- `os` - Tipo do Router (*ios*, *mikrotik*, *quagga,* *junos*, *openbgpd*, *huawei*).
 
-### Demonstration
+### Demonstração
 - http://dev.hsdn.org/lg/
-- http://lg.apc.sg/
 - http://lg.campus-rv.net/
 - http://lg.lankabell.com/
 
-#### Graph of BGP AS pathes demonstration
+#### Gráfico da demonstração com patch BGP AS
 - http://dev.hsdn.org/lg/?command=graph&protocol=ipv4&query=8.8.8.8&router=example1
-- http://lg.as51326.net/?command=graph&protocol=ipv4&query=8.8.8.8&router=example1
 
-### License
-    HSDN Looking Glass
+### Licença
+     Este programa é um software gratuito: você pode redistribuí-lo e / ou modificar
+     sob os termos da Licença Pública Geral GNU, publicada pela
+     Free Software Foundation, versão 3 da Licença ou
+     (a seu critério) qualquer versão posterior.
 
-    Copyright (C) 2012-2019 Information Networks Ltd.
-    Copyright (C) 2000-2002 Cougar
-    Copyright (C) 2014 Regional Networks Ltd.
+     Este programa é distribuído na esperança de que seja útil,
+     mas SEM QUALQUER GARANTIA; sem sequer a garantia implícita de
+     COMERCIALIZAÇÃO ou ADEQUAÇÃO PARA UMA FINALIDADE ESPECÍFICA. Veja o
+     GNU General Public License para mais detalhes.
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program. If not, see <http://www.gnu.org/licenses/>.
+     Você deveria ter recebido uma cópia da Licença Pública Geral GNU
+     junto com este programa. Caso contrário, consulte <http://www.gnu.org/licenses/>.
