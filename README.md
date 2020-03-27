@@ -68,6 +68,9 @@ $_CONFIG['routers'] = array
 #### Gráfico da demonstração com patch BGP AS
 - http://dev.hsdn.org/lg/?command=graph&protocol=ipv4&query=8.8.8.8&router=example1
 
+#### Debian 10 Buster 
+    apt install sshpass graphviz libgv-php7
+
 ### Licença
     Espelho HSDN
 
