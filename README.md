@@ -1,7 +1,7 @@
 ## PHP Looking Glass
 Based on https://github.com/hsdn/lg
 
-### General Features
+### Características gerais
 - Suporte a Telnet e SSH (plink ou sshpass).
 - Suporte a Cisco, MikroTik v5/v6, Juniper, Huawei (Comware), Quagga (Zebra) e OpenBGPD routers.
 - Suppores aos protocolos IPv4 e IPv6.
