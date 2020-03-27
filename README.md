@@ -18,8 +18,9 @@ Fork baseado em https://github.com/hsdn/lg
 #### Instalação no Debian 10 Buster (Simples e rápido)
 <pre># apt install apache2 apache2-utils php libapache2-mod-php php-pear sshpass graphviz
 # pear install Image_GraphViz-1.3.0
-# cd /var/www/html/
-# rm index.html
+
+# cd [ diretorio do servidor web ]
+
 # wget https://github.com/remontti/lg/raw/master/htdocs/favicon.ico
 # wget https://github.com/remontti/lg/raw/master/htdocs/lg_logo.gif
 # wget https://raw.githubusercontent.com/remontti/lg/master/htdocs/index.php
