@@ -1,4 +1,4 @@
-<?php isset($_CONFIG) or die('No direct access allowed.');
+<?php isset($_CONFIG) or die('Não é permitido acesso direto.');
 
 // ------------------------------------------------------------------------
 // CONFIGURAÇÃO DO LOOKING GLASS
@@ -74,5 +74,5 @@ $_CONFIG['routers'] = array
 		'ipv6' => TRUE,
 		'os' => 'mikrotik',
 	),
-/*
+*/
 );
