@@ -16,8 +16,7 @@ Based on https://github.com/hsdn/lg
 - php pear pacote Image_GraphViz (http://pear.php.net/package/Image_GraphViz).
 
 ### Instruções de instalação
-1. Copie **index.php** para o diretório inicial do servidor da web.
-2. Copie **lg_config.php.example** para **lg_config.php** no diretório inicial do servidor da web.
+1. Copie **index.php** e **lg_config.php** para o diretório inicial do servidor da web.
 3. Edite **lg_config.php** arquivo de configuração (veja a descrição dos parâmetros abaixo).
 
 ### Parâmetros de configuração
