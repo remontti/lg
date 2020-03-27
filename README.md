@@ -14,6 +14,7 @@ Based on https://github.com/hsdn/lg
 - Para as conexões SSH, é necessário **sshpass** ou Putty **plink** comando (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 - Kit de ferramentas GraphViz para desenhar gráfico de caminhos BGP (http://www.graphviz.org/).
 - php pear pacote Image_GraphViz (http://pear.php.net/package/Image_GraphViz).
+    pear install Image_GraphViz-1.3.0
 
 ### Instruções de instalação
 1. Copie **index.php** para o diretório inicial do servidor da web.
@@ -31,7 +32,7 @@ Based on https://github.com/hsdn/lg
 
 #### Programs Configuration
 - `$_CONFIG['sshcommand']` - Tipo de comando para fazer uma conexão SSH (você pode usar *plink* ou *sshpass*).
-- `$_CONFIG['plink']` - Caminho para**plink** comando se você usá-lo (para conexão SSH).
+- `$_CONFIG['plink']` - Caminho para **plink** comando se você usá-lo (para conexão SSH).
 - `$_CONFIG['sshpass']` - Caminho para **sshpass** comando se você usá-lo (para conexão SSH).
 
 #### Configuração dos Routers
