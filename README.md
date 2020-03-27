@@ -14,7 +14,6 @@ Based on https://github.com/hsdn/lg
 - Para as conexões SSH, é necessário **sshpass** ou Putty **plink** comando (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 - Kit de ferramentas GraphViz para desenhar gráfico de caminhos BGP (http://www.graphviz.org/).
 - php pear pacote Image_GraphViz (http://pear.php.net/package/Image_GraphViz).
-    pear install Image_GraphViz-1.3.0
 
 ### Instruções de instalação
 1. Copie **index.php** para o diretório inicial do servidor da web.
@@ -69,7 +68,10 @@ $_CONFIG['routers'] = array
 - http://dev.hsdn.org/lg/?command=graph&protocol=ipv4&query=8.8.8.8&router=example1
 
 #### Debian 10 Buster 
+    apt install apache2 apache2-utils 
+    apt install libapache2-mod-php php php-cli php-pear php-gmp php-gd php-bcmath php-mbstring php-curl php-xml php-zip
     apt install sshpass graphviz libgv-php7
+    pear install Image_GraphViz-1.3.0
 
 ### Licença
     Espelho HSDN
