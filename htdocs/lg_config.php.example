@@ -5,29 +5,29 @@
 // ------------------------------------------------------------------------
 
 /*
- * Your own AS number
+ * Seu AS
  */
 $_CONFIG['asn'] = '12345';
 
 /*
- * Your own company name
+ * Nome da empresa
  */
 $_CONFIG['company'] = 'My Company Name';
 
 /*
- * Your logo URL (or FALSE)
+ * URL do logo da empresa (ou FALSE)
  */
 $_CONFIG['logo'] = 'lg_logo.gif';
 
 /*
- * Main style color
+ * Cor principal
  */
-$_CONFIG['color'] = '#E48559';
+$_CONFIG['color'] = '#444444';
 
 /*
- * Type of command to make a SSH connection (`plink' or `sshpass')
+ * Tipo de comando para fazer uma conexão SSH (`plink' ou `sshpass')
  */
-$_CONFIG['sshcommand'] = 'plink';
+$_CONFIG['sshcommand'] = 'sshpass';
 
 /*
  * Putty `plink' command path (for SSH connections)
@@ -50,7 +50,7 @@ $_CONFIG['ipwhois'] = 'http://noc.hsdn.org/whois/';
 $_CONFIG['aswhois'] = 'http://noc.hsdn.org/aswhois/';
 
 /**
- * Router nodes
+ * Router nodes                                     
  *
  * Parameters:
  *	url          - URL address in format: [ssh|telnet]://[login]:[password]@[host]:[port]
@@ -58,11 +58,21 @@ $_CONFIG['aswhois'] = 'http://noc.hsdn.org/aswhois/';
  *	description  - Node description
  *	group        - Node group name (of FALSE)
  *	ipv6         - Node is supports IPv6 (TRUE/FALSE)
- *	os           - Node OS (ios, mikrotik, quagga, junos)
+ *	os           - Node OS (ios, mikrotik, quagga, junos, openbgpd, huawei)
  */
 $_CONFIG['routers'] = array
 (
-	'example1' => array
+        'exemplo_ixbr_sp' => array
+        (
+                'url' => 'telnet://lg.saopaulo.sp.ix.br:23',
+                'pingtraceurl' => TRUE,
+                'description' => 'IX.BR - SP',
+                'group' => 'AS22548',
+                'ipv6' => TRUE,
+                'os' => 'quagga',
+        ),
+
+	'exemplo_optus' => array
 	(
 		'url' => 'telnet://route-views.optus.net.au:23',
 		'pingtraceurl' => FALSE,
@@ -72,7 +82,7 @@ $_CONFIG['routers'] = array
 		'os' => 'ios',
 	),
 
-	'example2' => array
+	'exemplo_eastlink' => array
 	(
 		'url' => 'telnet://route-server.eastlink.ca:23',
 		'pingtraceurl' => FALSE,
