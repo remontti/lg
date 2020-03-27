@@ -1,64 +1,46 @@
 <?php isset($_CONFIG) or die('No direct access allowed.');
 
 // ------------------------------------------------------------------------
-// LOOKING GLASS CONFIGURATIONS
+// CONFIGURAÇÃO DO LOOKING GLASS
 // ------------------------------------------------------------------------
 
-/*
- * Seu AS
- */
+/* Seu AS */
 $_CONFIG['asn'] = '12345';
 
-/*
- * Nome da empresa
- */
+/* Nome da empresa */
 $_CONFIG['company'] = 'My Company Name';
 
-/*
- * URL do logo da empresa (ou FALSE)
- */
+/* URL do logo da empresa (ou FALSE) */
 $_CONFIG['logo'] = 'lg_logo.gif';
 
-/*
- * Cor principal
- */
+/* Cor principal */
 $_CONFIG['color'] = '#444444';
 
-/*
- * Tipo de comando para fazer uma conexão SSH (`plink' ou `sshpass')
- */
+/* Tipo de comando para fazer uma conexão SSH (`plink' ou `sshpass') */
 $_CONFIG['sshcommand'] = 'sshpass';
 
-/*
- * Putty `plink' command path (for SSH connections)
- */
+/* Putty `plink' comando (para conexão SSH) */
 $_CONFIG['plink'] = '/usr/local/bin/plink';
 
-/*
- * sshpass command path (for SSH connections)
- */
+/* sshpass comando (para conexão SSH) */
 $_CONFIG['sshpass'] = '/usr/bin/sshpass';
 
-/*
- * URL address of the IP whois service
- */
-$_CONFIG['ipwhois'] = 'http://noc.hsdn.org/whois/';
+/* URL IP whois serviço */
+$_CONFIG['ipwhois'] = 'https://rdap.registro.br/ip/';
 
-/*
- * URL address of the AS whois service
- */
-$_CONFIG['aswhois'] = 'http://noc.hsdn.org/aswhois/';
+/* URL AS whois serviço */
+$_CONFIG['aswhois'] = 'https://rdap.registro.br/autnum/';
 
 /**
- * Router nodes                                     
+ * Routers
  *
- * Parameters:
- *	url          - URL address in format: [ssh|telnet]://[login]:[password]@[host]:[port]
- *	pingtraceurl - URL address for ping and traceroute tools (or FALSE)
- *	description  - Node description
- *	group        - Node group name (of FALSE)
- *	ipv6         - Node is supports IPv6 (TRUE/FALSE)
- *	os           - Node OS (ios, mikrotik, quagga, junos, openbgpd, huawei)
+ * Parametros:
+ *	url          - URL formato: [ssh|telnet]://[login]:[password]@[host]:[port]
+ *	pingtraceurl - URL endereço para ping e traceroute (or FALSE)
+ *	description  - Descrição do router
+ *	group        - Grupo do router (of FALSE)
+ *	ipv6         - Suporta IPv6 (TRUE/FALSE)
+ *	os           - Sistema do router (ios, mikrotik, quagga, junos, openbgpd, huawei)
  */
 $_CONFIG['routers'] = array
 (
@@ -72,16 +54,6 @@ $_CONFIG['routers'] = array
                 'os' => 'quagga',
         ),
 
-	'exemplo_optus' => array
-	(
-		'url' => 'telnet://route-views.optus.net.au:23',
-		'pingtraceurl' => FALSE,
-		'description' => 'Example Router 1',
-		'group' => 'AS12345',
-		'ipv6' => TRUE,
-		'os' => 'ios',
-	),
-
 	'exemplo_eastlink' => array
 	(
 		'url' => 'telnet://route-server.eastlink.ca:23',
@@ -91,7 +63,16 @@ $_CONFIG['routers'] = array
 		'ipv6' => TRUE,
 		'os' => 'ios',
 	),
+
+/*
+	'exemplo_optus' => array
+	(
+		'url' => 'ssh://192.168.0.1:2222',
+		'pingtraceurl' => FALSE,
+		'description' => 'Meu RouterOS',
+		'group' => 'AS12345',
+		'ipv6' => TRUE,
+		'os' => 'mikrotik',
+	),
+/*
 );
-
-
-/* End of file */
