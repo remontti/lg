@@ -56,14 +56,14 @@
 $_CONFIG = array
 (
 	'asn' => '12345',
-	'company' => 'My Company Name',
+	'company' => 'Nome da Empresa',
 	'logo' => 'lg_logo.gif',
-	'color' => '#E48559',
-	'sshcommand' => 'plink',
+	'color' => '#444',
+	'sshcommand' => 'sshpass',
 	'plink' => '/usr/local/bin/plink',
 	'sshpass' => '/usr/bin/sshpass',
-	'ipwhois' => 'http://noc.hsdn.org/whois/',
-	'aswhois' => 'http://noc.hsdn.org/aswhois/',
+	'ipwhois' => 'https://rdap.registro.br/ip/',
+	'aswhois' => 'https://rdap.registro.br/autnum/',
 	'routers' => array(),
 );
 
@@ -337,7 +337,7 @@ if (isset($_CONFIG['routers'][$router]) AND
 				{
 					if ($command != 'graph')
 					{
-						print '<p>Address <b>'.$query.'</b> is converted to a subnet <b>'.$route.'</b> using the <a href="http://radb.net/" target="_blank">Merit RADb</a></p>';
+						print '<p>Endereço <b>'.$query.'</b> convertido em uma sub-rede <b>'.$route.'</b> usando dados de <a href="http://radb.net/" target="_blank">Merit RADb</a></p>';
 					}
 
 					$query = $route;
@@ -465,10 +465,10 @@ if (isset($_CONFIG['routers'][$router]) AND
 				}
 ?>
 		<div class="center">
-			<p>BGP routing graph for <b><?php print $query ?></b>, router: <b><?php print $_CONFIG['routers'][$router]['description'] ?></b></p>
-			<p><a href="?command=bgp&amp;protocol=<?php print $protocol ?>&amp;query=<?php print $query ?>&amp;router=<?php print $router ?>">Run a bgp command on this router</a></p>
+			<p>Gráfico de roteamento BGP para <b><?php print $query ?></b>, router: <b><?php print $_CONFIG['routers'][$router]['description'] ?></b></p>
+			<p><a href="?command=bgp&amp;protocol=<?php print $protocol ?>&amp;query=<?php print $query ?>&amp;router=<?php print $router ?>">Execute o comando bgp neste roteador</a></p>
 			<table border="0" class="legend">
-				<tr><td bgcolor="#CCCCFF" width="15">&nbsp;</td><td>Upstream AS</td><td width="80">&nbsp;</td><td bgcolor="#CCFFCC" width="15">&nbsp;</td><td>Peering AS</td><td width="80">&nbsp;</td><td bgcolor="white"><div style="height:12px;width:37px;background-image:url('data:image/gif;base64,R0lGODlhJQAMAOcAAAQCBISChJQ2NMTCxERCRcSCTGRiZYRWNEw2HKSipOTi5CQiJWRCJORCROyiXPzClISGnFRSVXRydKyi5DQyNRQSFJSSqdwCBPTy99xqlNTS1PwiJNSGvMSm7FxGRGxijIR+fPzk5JySzPSKVLS0tCQlNFxSdCQXDERCXOTC3LS21Dw6PSwCBNQeHAwKDPxSLHxyo+x2hNTS9MTG5KRyROzs7JSGwRwaHeyitPzU1KSivGxsbGRagVxaXXx8fLSq8ZycnPw0NOSaXLyCTExKTrxqbHwiJPylpDQzRPz+/GxuhCwqN4yOjJRkPEQ+WeTk/CwsLPRCTKSa3PwUFBQOCtza/Py0tNSPVGxKLIyKn1RVZBQWHPwDBPz09PxkZPybnIR3rFxcbExKZPzExDw6VPx8fNzO/KyqxJyatPQeLBQCBMzMzERGVGRldFw+JDQiFHRyhNzb3PQqPPTu/PyEhLy8vLyy/AwNFPxVVMzK6pSOxBweLOza7Lyq9HxunDQuQfxMTLwmJPzavPyUlMyb3JxaXLx+TFRKbCQeLOxufKysrPSuvORKZMSy/OTO7Hx+lPwKDIyCt/x0dPzc3Pw8PPysrPy8vPxsbPzNzPyMjPxaXIyKjMyOzHRqlcyKVCweFLy+3JSWlNyWW4R+tJxqPMTC3LSyzFw6PPwaHPwsLPzs7AwGBFQ5JGxGLPSiYLSi5hwSDKSV1ExCXLy61tzW/Dw1TJSSlOzi9PxERKya3BwWJMQqLISClNTW5CwmNKx2ROzs/PSmtGxsfHx7jJyarOyeXJxmPHRNLFxafExKbJyOzIx+fPR2hIx+tAQGBERGRWRmZOTm5CQmJWRGLPzGnFRWVDQ2NZSWrPT298Sq9GxmjlxWeTw+PQwODNTW9pSKxBweHaSmvWRehFxeXExOTCwuNNze/IyOpExOXDw+TKyuypyetXR2iMzO7Lyu+FROcPwODHRunPweHfSmZLSm7ExGZOzm/Kye44SGhMTGxIRaNKSmpHR2dBQWFNTW1PwmJCwAAAAAJQAMAAAIagCTCBxIsKBBVQYTKlxo8AsXL5YYSpzokAuXKZIwTdxYsKJFi/LK5OC40ePHj6kyhRh4pKXLlzBjXjpJ82OQRElq6tw5ZWfNKCQb+rQYZFDQhCZPpqIz6ajCpCFHOl1YccqlMVMnHoG4MSAAOw==')"></div></td><td>Best route</td></tr>
+				<tr><td bgcolor="#CCCCFF" width="15">&nbsp;</td><td>Upstream AS</td><td width="80">&nbsp;</td><td bgcolor="#CCFFCC" width="15">&nbsp;</td><td>Peering AS</td><td width="80">&nbsp;</td><td bgcolor="white"><div style="height:12px;width:37px;background-image:url('data:image/gif;base64,R0lGODlhJQAMAOcAAAQCBISChJQ2NMTCxERCRcSCTGRiZYRWNEw2HKSipOTi5CQiJWRCJORCROyiXPzClISGnFRSVXRydKyi5DQyNRQSFJSSqdwCBPTy99xqlNTS1PwiJNSGvMSm7FxGRGxijIR+fPzk5JySzPSKVLS0tCQlNFxSdCQXDERCXOTC3LS21Dw6PSwCBNQeHAwKDPxSLHxyo+x2hNTS9MTG5KRyROzs7JSGwRwaHeyitPzU1KSivGxsbGRagVxaXXx8fLSq8ZycnPw0NOSaXLyCTExKTrxqbHwiJPylpDQzRPz+/GxuhCwqN4yOjJRkPEQ+WeTk/CwsLPRCTKSa3PwUFBQOCtza/Py0tNSPVGxKLIyKn1RVZBQWHPwDBPz09PxkZPybnIR3rFxcbExKZPzExDw6VPx8fNzO/KyqxJyatPQeLBQCBMzMzERGVGRldFw+JDQiFHRyhNzb3PQqPPTu/PyEhLy8vLyy/AwNFPxVVMzK6pSOxBweLOza7Lyq9HxunDQuQfxMTLwmJPzavPyUlMyb3JxaXLx+TFRKbCQeLOxufKysrPSuvORKZMSy/OTO7Hx+lPwKDIyCt/x0dPzc3Pw8PPysrPy8vPxsbPzNzPyMjPxaXIyKjMyOzHRqlcyKVCweFLy+3JSWlNyWW4R+tJxqPMTC3LSyzFw6PPwaHPwsLPzs7AwGBFQ5JGxGLPSiYLSi5hwSDKSV1ExCXLy61tzW/Dw1TJSSlOzi9PxERKya3BwWJMQqLISClNTW5CwmNKx2ROzs/PSmtGxsfHx7jJyarOyeXJxmPHRNLFxafExKbJyOzIx+fPR2hIx+tAQGBERGRWRmZOTm5CQmJWRGLPzGnFRWVDQ2NZSWrPT298Sq9GxmjlxWeTw+PQwODNTW9pSKxBweHaSmvWRehFxeXExOTCwuNNze/IyOpExOXDw+TKyuypyetXR2iMzO7Lyu+FROcPwODHRunPweHfSmZLSm7ExGZOzm/Kye44SGhMTGxIRaNKSmpHR2dBQWFNTW1PwmJCwAAAAAJQAMAAAIagCTCBxIsKBBVQYTKlxo8AsXL5YYSpzokAuXKZIwTdxYsKJFi/LK5OC40ePHj6kyhRh4pKXLlzBjXjpJ82OQRElq6tw5ZWfNKCQb+rQYZFDQhCZPpqIz6ajCpCFHOl1YccqlMVMnHoG4MSAAOw==')"></div></td><td>Melhor rota</td></tr>
 			</table>
 			<br>
 			<div id="loading" style="display:inline"><p><b>Please wait...</b></p></div>
