@@ -68,15 +68,21 @@ $_CONFIG['routers'] = array
 - http://dev.hsdn.org/lg/?command=graph&protocol=ipv4&query=8.8.8.8&router=example1
 
 ### Licença
-     Este programa é um software gratuito: você pode redistribuí-lo e / ou modificar
-     sob os termos da Licença Pública Geral GNU, publicada pela
-     Free Software Foundation, versão 3 da Licença ou
-     (a seu critério) qualquer versão posterior.
+    Espelho HSDN
 
-     Este programa é distribuído na esperança de que seja útil,
-     mas SEM QUALQUER GARANTIA; sem sequer a garantia implícita de
-     COMERCIALIZAÇÃO ou ADEQUAÇÃO PARA UMA FINALIDADE ESPECÍFICA. Veja o
-     GNU General Public License para mais detalhes.
+    Copyright (C) 2012-2019 Information Networks Ltd.
+    Direitos autorais (C) 2000-2002 Cougar
+    Direitos autorais (C) 2014 Regional Networks Ltd.
 
-     Você deveria ter recebido uma cópia da Licença Pública Geral GNU
-     junto com este programa. Caso contrário, consulte <http://www.gnu.org/licenses/>.
+    Este programa é um software gratuito: você pode redistribuí-lo e / ou modificar
+    sob os termos da Licença Pública Geral GNU, publicada pela
+    Free Software Foundation, versão 3 da Licença ou
+    (a seu critério) qualquer versão posterior.
+
+    Este programa é distribuído na esperança de que seja útil,
+    mas SEM QUALQUER GARANTIA; sem sequer a garantia implícita de
+    COMERCIALIZAÇÃO ou ADEQUAÇÃO PARA UMA FINALIDADE ESPECÍFICA. Veja o
+    GNU General Public License para mais detalhes.
+
+    Você deveria ter recebido uma cópia da Licença Pública Geral GNU
+    junto com este programa. Caso contrário, consulte <http://www.gnu.org/licenses/>.
