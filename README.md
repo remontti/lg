@@ -28,6 +28,7 @@ Fork baseado em https://github.com/hsdn/lg
 
 Edite o **lg_config.php** com os parâmetros da sua infraestrutura.
 </pre>
+https://blog.remontti.com.br/4243
 
 ### Parâmetros de configuração
 #### Configuração das variável 
