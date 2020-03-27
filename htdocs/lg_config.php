@@ -8,7 +8,7 @@
 $_CONFIG['asn'] = '12345';
 
 /* Nome da empresa */
-$_CONFIG['company'] = 'My Company Name';
+$_CONFIG['company'] = 'Nome da Empresa';
 
 /* URL do logo da empresa (ou FALSE) */
 $_CONFIG['logo'] = 'lg_logo.gif';
