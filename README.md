@@ -1,5 +1,5 @@
 ## PHP Looking Glass
-Based on https://github.com/hsdn/lg
+Fork baseado em https://github.com/hsdn/lg
 
 ### Características gerais
 - Suporte a Telnet e SSH (plink ou sshpass).
