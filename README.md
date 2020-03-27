@@ -16,9 +16,7 @@ Fork baseado em https://github.com/hsdn/lg
 - php pear pacote Image_GraphViz (http://pear.php.net/package/Image_GraphViz).
 
 #### Instalação no Debian 10 Buster (Simples e rápido)
-<pre># apt install apache2 apache2-utils libapache2-mod-php php php-cli\
-  php-pear php-gmp php-gd php-bcmath php-mbstring php-curl php-xml php-zip\
-  sshpass graphviz libgv-php7
+<pre># apt install apache2 apache2-utils php libapache2-mod-php php-pear sshpass graphviz
 # pear install Image_GraphViz-1.3.0
 # cd /var/www/html/
 # rm index.html
