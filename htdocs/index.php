@@ -505,7 +505,7 @@ else
 		<form method="get" action="">
 		<div class="center">
 			<table class="form" cellpadding="2" cellspacing="2">
-				<tr><th>Type of Query</th><th>Additional parameters</th><th>Node</th></tr>
+				<tr><th>Tipo de consulta</th><th>Parâmetros adicionais</th><th>Router</th></tr>
 				<tr><td>
 				<table border="0" cellpadding="2" cellspacing="2">
 					<tr><td><input type="radio" name="command" id="bgp" value="bgp" checked="checked"></td><td><label for="bgp">bgp</label></td></tr>
@@ -535,7 +535,7 @@ else
 <?php endif ?>
 <?php endforeach ?>
 				</select></td></tr>
-				<tr><td align="center" colspan="3"><p><input type="submit" value="Submit"> | <input type="reset" value="Reset"></p></td></tr>
+				<tr><td align="center" colspan="3"><p><input type="submit" value="Enviar"> | <input type="reset" value="Limpar"></p></td></tr>
 			</table>
 		</div>
 		</form>
@@ -546,7 +546,7 @@ else
 ?>
 		<hr>
 		<div class="center">
-			<p><small>Information: <a href="https://stat.ripe.net/AS<?php print $_CONFIG['asn'] ?>" target="_blank">RIPEstat</a> <a href="http://bgp.he.net/AS<?php print $_CONFIG['asn'] ?>" target="_blank">he.net</a> <a href="https://www.robtex.com/as/AS<?php print $_CONFIG['asn'] ?>.html" target="_blank">robtex.com</a> <a href="http://www.peeringdb.com/view.php?asn=<?php print $_CONFIG['asn'] ?>" target="_blank">PeeringDB</a></small></p>
+			<p><small>Mais informações: <a href="https://stat.ripe.net/AS<?php print $_CONFIG['asn'] ?>" target="_blank">RIPEstat</a> <a href="http://bgp.he.net/AS<?php print $_CONFIG['asn'] ?>" target="_blank">he.net</a> <a href="https://www.robtex.com/as/AS<?php print $_CONFIG['asn'] ?>.html" target="_blank">robtex.com</a> <a href="http://www.peeringdb.com/view.php?asn=<?php print $_CONFIG['asn'] ?>" target="_blank">PeeringDB</a> <a href="https://rdap.registro.br/autnum/<?php print $_CONFIG['asn'] ?>" target="_blank">RDAP registro.br</a></small></p>
 			<p>Copyright &copy; <?php print date('Y') ?> <?php print htmlspecialchars($_CONFIG['company']) ?></p>
 		</div>
 	</body>
