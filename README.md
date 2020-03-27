@@ -15,9 +15,20 @@ Based on https://github.com/hsdn/lg
 - Kit de ferramentas GraphViz para desenhar gráfico de caminhos BGP (http://www.graphviz.org/).
 - php pear pacote Image_GraphViz (http://pear.php.net/package/Image_GraphViz).
 
-### Instruções de instalação
-1. Copie **index.php** e **lg_config.php** para o diretório inicial do servidor da web.
-3. Edite **lg_config.php** arquivo de configuração (veja a descrição dos parâmetros abaixo).
+#### Instalação no Debian 10 Buster (Simples e rápido)
+<pre># apt install apache2 apache2-utils libapache2-mod-php php php-cli\
+  php-pear php-gmp php-gd php-bcmath php-mbstring php-curl php-xml php-zip\
+  sshpass graphviz libgv-php7
+# pear install Image_GraphViz-1.3.0
+# cd /var/www/html/
+# rm index.html
+# wget https://github.com/remontti/lg/raw/master/htdocs/favicon.ico
+# wget https://github.com/remontti/lg/raw/master/htdocs/lg_logo.gif
+# wget https://raw.githubusercontent.com/remontti/lg/master/htdocs/index.php
+# wget https://raw.githubusercontent.com/remontti/lg/master/htdocs/lg_config.php
+
+Edite o **lg_config.php** com os parâmetros da sua infraestrutura.
+</pre>
 
 ### Parâmetros de configuração
 #### Configuração das variável 
@@ -65,12 +76,6 @@ $_CONFIG['routers'] = array
 
 #### Gráfico da demonstração com patch BGP AS
 - http://dev.hsdn.org/lg/?command=graph&protocol=ipv4&query=8.8.8.8&router=example1
-
-#### Debian 10 Buster 
-    apt install apache2 apache2-utils 
-    apt install libapache2-mod-php php php-cli php-pear php-gmp php-gd php-bcmath php-mbstring php-curl php-xml php-zip
-    apt install sshpass graphviz libgv-php7
-    pear install Image_GraphViz-1.3.0
 
 ### Licença
     Espelho HSDN
