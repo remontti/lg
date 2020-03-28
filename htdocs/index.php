@@ -2264,8 +2264,8 @@ function build_table($table_array)
 		$line = array();
 
 		foreach ($data as $field => $value)
-		{
-			if (reset(array_keys($data)) == $field)
+		{	$array_keys_data = array_keys($data);
+			if (reset($array_keys_data) == $field)
 			{
 				$line[] = $value.str_repeat(' ', $max[$field] - mb_strlen(strip_tags($value)));
 			}
