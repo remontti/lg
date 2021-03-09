@@ -187,7 +187,7 @@ $queries = array
 	(
 		'ipv4' => array
 		(
-			'bgp' => '/ip route print detail where bgp dst-address=%s',
+			'bgp' => '/ip route print detail where bgp dst-address in %s',
 			'advertised-routes' => '/routing bgp advertisements print peer=%s',
 			'routes' => '/ip route print where gateway=%s',
 			'summary' => '/routing bgp peer print status where address-families=ip',
